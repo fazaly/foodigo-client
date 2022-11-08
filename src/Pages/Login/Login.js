@@ -18,7 +18,7 @@ const Login = () => {
                     <form className="space-y-6 ng-untouched ng-pristine ng-valid">
                         <div className="space-y-1 text-sm">
                             <label htmlFor="Email" className="block dark:text-gray-400">Email</label>
-                            <input type="email" name="username" id="username" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+                            <input type="email" name="email" id="username" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                         </div>
                         <div className="space-y-1 text-sm">
                             <label htmlFor="password" className="block dark:text-gray-400">Password</label>
