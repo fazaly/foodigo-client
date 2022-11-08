@@ -35,7 +35,7 @@ const Header = () => {
             <div className="navbar-end">
                 <button className="btn btn-warning hover:bg-black hover:text-white hover:border-black text-[15px] font-semibold normal-case">Restaurant Search</button>
             </div>
-            </div>
+        </div>
     );
 };
 
