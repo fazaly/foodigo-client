@@ -1,8 +1,12 @@
+.title{
+    margin-top: 350px;
+}
 .text-info{
     border: 1px solid gray;
-    width: 350px !important;
-    height: 300px !important;
+    width: 350px;
+    height: 300px;
     border-radius: 8px;
+    margin: 0 auto;
     /* background-color: gray; */
 }
 .btn-primary{

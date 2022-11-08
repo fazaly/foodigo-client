@@ -4,18 +4,16 @@ import './ErrorPage.css';
 
 const ErrorPage = () => {
     return (
-        <section className="flex align-items-center mx-auto justify-content-center error">
-            <div className="d-flex align-items-center justify-content-center vh-100">
-                <div className="text-center text-info">
-                    <h1 className="display-1 fw-bold text-danger">404</h1>
-                    <p className="fs-3 text-black"> <span className="text-danger">Opps!</span> Page not found.</p>
-                    <p className="lead text-black">
-                        The page you're looking for doesn't exist.
-                    </p>
-                    <Link to='/' className="btn btn-primary text-decoration-none">Back To Home</Link>
-                </div>
+        <div className='title'>
+            <div className="text-center text-info">
+                <h1 className="text-9xl text-red-500 mb-2">404</h1>
+                <p className="text-2xl text-black"> <span className="text-red-700 text-2xl">Opps!</span> Page not found.</p>
+                <p className="lead text-black mb-5">
+                    The page you're looking for doesn't exist.
+                </p>
+                <Link to='/' className="btn btn-warning">Back To Home</Link>
             </div>
-        </section>
+        </div>
     );
 };
 
