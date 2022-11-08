@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/images/login/Forgot password.gif'
+import useTitle from '../../Hooks/UseTitle/UseTitle';
 
 const Login = () => {
+
+    useTitle('Login');
+
     return (
         <div className="hero min-h-screen">
             <div className="hero-content grid grid-cols-1 gap-20 md:gap-24 lg:gap-24 md:grid-cols-2 lg:grid-cols-2 flex-col lg:flex-row">
