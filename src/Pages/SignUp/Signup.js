@@ -7,7 +7,49 @@ import useTitle from '../../Hooks/UseTitle/UseTitle';
 const Signup = () => {
     useTitle('Signup');
 
-    
+    const {createUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
+
+    const handleSignUp = event => {
+        event.preventDefault();
+
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, email, password);
+
+        createUser(email, password)
+        .then( result => {
+            const user  = result.user;
+            console.log(user);
+            form.reset();
+        })
+        .catch( error => console.error(error))
+    }
+
+    // Google Sign In
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+        .then( (result) => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
+    // Github Sign In
+    const handleGithubSignIn = () => {
+        signInWithGithub()
+        .then( (result) => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
 
     return (
         <div className="hero min-h-screen">
