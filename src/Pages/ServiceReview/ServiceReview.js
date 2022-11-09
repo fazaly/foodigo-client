@@ -5,7 +5,7 @@ import PlaceReview from './PlaceReview';
 import ServiceDetailCard from './ServiceDetailCard';
 
 const ServiceReview = () => {
-    const [services, setServices] = useState([])
+    const [services, setServices] = useState([]);
     const router = useParams();
     const {id} = router;
     // console.log(id);
