@@ -6,6 +6,7 @@ import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home";
 import AllService from "../../Pages/Home/Services/AllService";
 import Login from "../../Pages/Login/Login";
+import MyReview from "../../Pages/MyReview/MyReview";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceReview from "../../Pages/ServiceReview/ServiceReview";
 import Signup from "../../Pages/SignUp/Signup";
@@ -28,6 +29,10 @@ const router = createBrowserRouter( [
             {
                 path: '/allservices',
                 element: <AllService/>
+            },
+            {
+                path: '/review',
+                element: <MyReview/>
             },
             {
                 path: '/allservices',

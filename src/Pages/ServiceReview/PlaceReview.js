@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const PlaceReview = ({service}) => {
     const {user} = useContext(AuthContext);
     const {serviceName} = service;
+    const navigate = useNavigate();
     const handlePlaceOrder = event => {
         event.preventDefault();
 
@@ -38,6 +40,7 @@ const PlaceReview = ({service}) => {
             if(data.acknowledged){
                 toast.success('Review placed Successfully')
                 form.reset();
+                navigate('/');
             }
             console.log(data)})
         .catch(error => console.error(error))
@@ -59,7 +62,7 @@ const PlaceReview = ({service}) => {
                     <textarea className="textarea textarea-primary h-24 w-full" name='message' placeholder="Bio" required></textarea>
                 </div>
                 <div className='px-6'>
-                    <input className='btn btn-accent text-white' type="submit" value="Place Add Review" />
+                    <input className='btn btn-accent text-white' type="submit" value="Add Review" />
                 </div>
             </form>
         </div>

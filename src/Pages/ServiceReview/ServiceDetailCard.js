@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ServiceDetailCard = ({service}) => {
     const { _id, serviceName, price, message, image } = service;
