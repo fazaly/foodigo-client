@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useTitle from '../../Hooks/UseTitle/UseTitle';
 import banner from '../../assets/images/banner/eiliv-aceron-ZuIDLSz3XLg-unsplash.jpg'
 import Delicious from './Delicious/Delicious';
+import Services from './Services/Services';
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
                     <img src={banner} alt="" className="max-w-sm md:max-w-md lg:max-w-md rounded-lg shadow-2xl" />
                 </div>
             </div>
+            <Services/>
             <Delicious/>
         </section>
     );
