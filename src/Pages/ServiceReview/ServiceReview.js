@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ClientReview from './ClientReview';
 import PlaceReview from './PlaceReview';
 import ServiceDetailCard from './ServiceDetailCard';
 
@@ -35,7 +36,7 @@ const ServiceReview = () => {
                 </section>
             </div>
             <section>
-                <h3>review option</h3>
+                <ClientReview/>
             </section>
         </div>
     );

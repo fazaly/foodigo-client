@@ -9,9 +9,9 @@ const PlaceReview = ({service}) => {
         event.preventDefault();
 
         const form = event.target;
-        const service = form.service.value;
+        const service = form.service.value || 'service not found';
         const rating = form.rating.value;
-        const photoURL = form.photoURL.value
+        const photoURL = form.photoURL.value || 'image not found';
         const email = user?.email || 'unregistered';
         const message = form.message.value;
         console.log(service, rating, email, photoURL, message);
