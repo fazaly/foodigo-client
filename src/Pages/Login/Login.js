@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/Forgot password.gif'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/UseTitle/UseTitle';
 
 const Login = () => {
     useTitle('Login');
+    const location = useLocation();
     const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
 
     const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
 
@@ -43,7 +46,7 @@ const Login = () => {
                 localStorage.setItem('FOODIGO-token', data.token);
 
             // redirect to where you wanted to go
-            // navigate(from, {replace: true});
+            navigate(from, {replace: true});
             form.reset();
             })
             // redirect to where you wanted to go
