@@ -10,8 +10,10 @@ import MyReview from "../../Pages/MyReview/MyReview";
 import UpdateReview from "../../Pages/MyReview/UpdateReview";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ClientReview from "../../Pages/ServiceReview/ClientReview";
+import PlaceReview from "../../Pages/ServiceReview/PlaceReview";
 import ServiceReview from "../../Pages/ServiceReview/ServiceReview";
 import Signup from "../../Pages/SignUp/Signup";
+import PrivateRoute from "./PrivateRoute";
 
 // Create Browser Router
 const router = createBrowserRouter( [
@@ -47,6 +49,10 @@ const router = createBrowserRouter( [
             {
                 path: '/service',
                 element: <AddService/>
+            },
+            {
+                path: '/place',
+                element: <PrivateRoute><PlaceReview/></PrivateRoute>
             },
             {
                 path: '/blog',
