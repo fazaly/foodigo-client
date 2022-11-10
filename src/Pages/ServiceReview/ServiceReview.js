@@ -22,7 +22,7 @@ const ServiceReview = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
                 <section>
                     {
-                        services.map(service => <ServiceDetailCard
+                        services.sort((a, b) => b.time - a.time).map(service => <ServiceDetailCard
                         key={service._id}
                         service={service}
                         ></ServiceDetailCard>)

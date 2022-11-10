@@ -6,6 +6,8 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 const PlaceReview = ({service}) => {
     const {user} = useContext(AuthContext);
     const {serviceName} = service;
+    const navigate = useNavigate();
+    const data = new Date();
     const handlePlaceOrder = event => {
         event.preventDefault();
 
@@ -22,7 +24,8 @@ const PlaceReview = ({service}) => {
             image: photoURL,
             rating: rating,
             email: email,
-            message: message
+            message: message,
+            time: data.getTime()
         }
 
         // create services
@@ -36,9 +39,14 @@ const PlaceReview = ({service}) => {
         })
         .then(res => res.json())
         .then(data => {
-            if(data.acknowledged){
+            if(data.acknowledged && user?.email){
                 toast.success('Review placed Successfully')
                 form.reset();
+                navigate('/');
+            }
+            else{
+                navigate('/login')
+                toast.error('You have to login first')
             }
             console.log(data)})
         .catch(error => console.error(error))

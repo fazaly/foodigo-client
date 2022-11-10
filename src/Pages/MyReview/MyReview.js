@@ -72,7 +72,7 @@ const MyReview = () => {
                         </tr>
                     </thead>
                     {
-                            reviews.map(review => <DetailReview
+                            reviews.sort((a, b) => b.time - a.time).map(review => <DetailReview
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}

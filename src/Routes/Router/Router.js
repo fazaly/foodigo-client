@@ -5,6 +5,7 @@ import Blog from "../../Pages/Blog/Blog";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home";
 import AllService from "../../Pages/Home/Services/AllService";
+import ServiceCard from "../../Pages/Home/Services/ServiceCard";
 import Login from "../../Pages/Login/Login";
 import MyReview from "../../Pages/MyReview/MyReview";
 import UpdateReview from "../../Pages/MyReview/UpdateReview";
@@ -31,12 +32,8 @@ const router = createBrowserRouter( [
                 element: <Home/>
             },
             {
-                path: '/allservices',
-                element: <AllService/>
-            },
-            {
                 path: '/review',
-                element: <MyReview/>
+                element: <PrivateRoute><MyReview/></PrivateRoute>
             },
             {
                 path: '/allservices',
@@ -48,11 +45,7 @@ const router = createBrowserRouter( [
             },
             {
                 path: '/service',
-                element: <AddService/>
-            },
-            {
-                path: '/place',
-                element: <PrivateRoute><PlaceReview/></PrivateRoute>
+                element: <PrivateRoute><AddService/></PrivateRoute>
             },
             {
                 path: '/blog',

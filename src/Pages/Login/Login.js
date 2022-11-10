@@ -49,8 +49,6 @@ const Login = () => {
             navigate(from, {replace: true});
             form.reset();
             })
-            // redirect to where you wanted to go
-            // navigate(from, {replace: true});
         })
         .catch( error => console.error(error))
     }

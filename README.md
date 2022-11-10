@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+## FOODIGO Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The importance of food is obvious and essential. Healthy food provides us the nutrients and energy to develop and grow, be active and healthy, to move, play, work, think and learn. 
+Foods are directly related to our body and mental and social health because each food or liquid contains particular nutrition such as carbohydrates, protein, vitamins, minerals, fats, etc, which are very necessary for our physical and mental growth.
 
-## Available Scripts
+## Live Link
 
-In the project directory, you can run:
+Hosted in Firebase -> [FOODIGO]()
 
-### `npm start`
+## Firebase - Google
+Firebase -> [Link](https://firebase.google.com/?hl=es-419)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Context API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## MongoDB Atlas - Google
+MongoDB Atlas -> [Link](https://www.mongodb.com/cloud/atlas/register)
 
-### `npm test`
+Documentation Link -> [Link](https://reactjs.org/docs/context.html#api)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## React Router Dom v6.4 
 
-### `npm run build`
+Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Resources & Credits
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## React Tailwind Components -> 
+[Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
+[DaisyUI](https://daisyui.com/)
+[Mamba UI](https://mambaui.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Other Resources
 
-### `npm run eject`
+Icon -> [React Icons](https://react-icons.github.io/react-icons/)
+## [react-hot-toast](https://react-hot-toast.com/)
+## [react-photo-view](https://www.npmjs.com/package/react-photo-view)
+## [react-router-dom](https://reactrouter.com/en/main)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+/*
+## Basic Router Setup:
+1. npx create-react-app 
+2. npm install react-router-dom
+3. create a router using createBrowserRouter
+4. add RouterProvider and set router props
+5. create a lot of components
+6. create Main layout with some common part and one changing part based on the route
+7. set Main layout at the root of the route
+8. set children routes
+9. set Links on the header components
+*/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+/*
+## Context API:
+1. Declare a context
+2. set provider with value
+3. useContext in the place where you want to get the context
+ */
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ /*
+ ## Private Route
+ 1. Declare a private route component
+ */

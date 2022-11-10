@@ -5,6 +5,7 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const AddService = () => {
     const {user} = useContext(AuthContext);
+    const data = new Date();
 
     const handlePlaceOrder = event => {
         event.preventDefault();
@@ -22,7 +23,8 @@ const AddService = () => {
             image: photoURL,
             price: price,
             email: email,
-            message: message
+            message: message,
+            time: data.getTime()
         }
 
         // create services
@@ -30,7 +32,6 @@ const AddService = () => {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',
-                // authorization:  `Bearer ${localStorage.getItem('')}`
             },
             body: JSON.stringify(serviceCollection)
         })

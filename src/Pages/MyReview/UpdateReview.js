@@ -42,7 +42,7 @@ const UpdateReview = () => {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json',
-                // authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
+                authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
             },
             body: JSON.stringify(reviews)
         })
