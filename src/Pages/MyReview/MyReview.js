@@ -11,7 +11,7 @@ const MyReview = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`,{
+        fetch(`https://b6a11-service-review-server-side-fazaly.vercel.app/review?email=${user?.email}`,{
             // json web token
             headers: {
                 authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
@@ -31,7 +31,7 @@ const MyReview = () => {
 
     // delete review item
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/review/${id}`,{
+        fetch(`https://b6a11-service-review-server-side-fazaly.vercel.app/review/${id}`,{
             method: 'DELETE',
             authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
         })
