@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/Forgot password.gif'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/UseTitle/UseTitle';
 
 const Login = () => {
     useTitle('Login');
+    const navigate = useNavigate();
 
     const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
 
@@ -17,11 +18,36 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
+        // Sign in with email & password
         signIn(email, password)
         .then( result => {
             const user  = result.user;
-            console.log(user);
+            // console.log(user);
+
+            const currentUser = {
+                email: user.email
+            }
+            console.log(currentUser);
+            // get jwt token
+            fetch('http://localhost:5000/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(currentUser)
+            })
+            .then( res => res.json())
+            .then( data => {
+                console.log(data);
+                // local storage is the easiest but not the best place for jwt token
+                localStorage.setItem('FOODIGO-token', data.token);
+
+            // redirect to where you wanted to go
+            // navigate(from, {replace: true});
             form.reset();
+            })
+            // redirect to where you wanted to go
+            // navigate(from, {replace: true});
         })
         .catch( error => console.error(error))
     }

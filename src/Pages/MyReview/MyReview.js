@@ -1,19 +1,52 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import DetailReview from './DetailReview';
 
 const MyReview = () => {
-    const {user} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
+    const [refresh, setRefresh] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
-        .then(res => res.json())
-        .then(data => setReviews(data))
-    }, [user?.email])
+        fetch(`http://localhost:5000/review?email=${user?.email}`,{
+            // json web token
+            headers: {
+                authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
+            }
+        })
+        .then(res => {
+            if(res.status === 401 || res.status === 403){
+                return logOut()
+            }
+            return res.json()
+        })
+        .then(data => {
+            // console.log('received', data);
+            setReviews(data)
+        })
+    }, [user?.email, refresh, logOut])
 
+    // delete review item
     const handleDelete = (id) => {
-        console.log(id);
+        fetch(`http://localhost:5000/review/${id}`,{
+            method: 'DELETE',
+            authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deletedCount > 0){
+                toast.success('Deleted Successfully');
+                setRefresh(!refresh);
+                console.log(data)
+            }
+        })
+    }
+
+    const handleUpdate = (id) => {
+        navigate(`/reviews/update/${id}`)
     }
 
     return (
@@ -43,6 +76,7 @@ const MyReview = () => {
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}
+                                handleUpdate={handleUpdate}
                             ></DetailReview>)
                     }
                 </table>

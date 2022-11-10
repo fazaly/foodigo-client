@@ -9,7 +9,7 @@ const Services = () => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setServices(data);
             })
     }, [])
@@ -27,7 +27,7 @@ const Services = () => {
                         }
                     </div>
                     <div className="flex justify-center">
-                        <Link to='/allservices'><button type="button" className="px-6 py-3 text-sm rounded-md  bg-gray-900 text-gray-400">Load more services...</button></Link>
+                        <Link to='/allservices'><button type="button" className="px-6 py-3 text-[15px] rounded-md  bg-yellow-400 text-gray-700">Load more services...</button></Link>
                     </div>
                 </div>
             </section>

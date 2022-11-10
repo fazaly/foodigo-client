@@ -7,7 +7,9 @@ import Home from "../../Pages/Home/Home";
 import AllService from "../../Pages/Home/Services/AllService";
 import Login from "../../Pages/Login/Login";
 import MyReview from "../../Pages/MyReview/MyReview";
+import UpdateReview from "../../Pages/MyReview/UpdateReview";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
+import ClientReview from "../../Pages/ServiceReview/ClientReview";
 import ServiceReview from "../../Pages/ServiceReview/ServiceReview";
 import Signup from "../../Pages/SignUp/Signup";
 
@@ -58,6 +60,10 @@ const router = createBrowserRouter( [
                 path: '/signup',
                 element: <Signup/>
             },
+            {
+                path: '/reviews/update/:id',
+                element: <UpdateReview/>
+            }
         ]
     }
 ]);

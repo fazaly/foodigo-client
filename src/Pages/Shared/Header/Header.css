@@ -1,0 +1,10 @@
+.logo{
+    height: 22px;
+    width: 22px;
+    margin-left: 3px;
+    margin-top: 2px;
+    
+}
+.logo img{
+    color: red;
+}

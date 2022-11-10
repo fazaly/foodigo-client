@@ -37,6 +37,7 @@ const AuthProvider = ({children}) => {
 
     // logout 
     const logOut = () => {
+        localStorage.removeItem('FOODIGO-token');
         return signOut(auth);
     }
 

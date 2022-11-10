@@ -7,7 +7,9 @@ const ClientReview = () => {
     useEffect(() => {
         fetch('http://localhost:5000/reviews')
         .then(res => res.json())
-        .then(data => setReviews(data))
+        .then(data => {
+            // console.log(data);
+            setReviews(data)})
     }, [])
     return (
         <div className="container p-2 mx-auto sm:p-4 text-gray-600 mt-10">

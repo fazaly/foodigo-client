@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/Mobile login.gif';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/UseTitle/UseTitle';
 
 const Signup = () => {
     useTitle('Signup');
+    const navigate = useNavigate();
 
     const {createUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
 
@@ -23,6 +24,7 @@ const Signup = () => {
             const user  = result.user;
             console.log(user);
             form.reset();
+            navigate('/')
         })
         .catch( error => console.error(error))
     }

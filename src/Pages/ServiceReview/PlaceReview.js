@@ -31,7 +31,7 @@ const PlaceReview = ({service}) => {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',
-                // authorization:  `Bearer ${localStorage.getItem('')}`
+                authorization:  `Bearer ${localStorage.getItem('FOODIGO-token')}`
             },
             body: JSON.stringify(reviewCollection)
         })
