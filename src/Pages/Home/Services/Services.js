@@ -15,8 +15,8 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <section className=" text-gray-600 mt-10">
-                <h1 className='text-5xl text-center font-bold text-gray-600'>All Services</h1>
+            <section className=" text-gray-600 mt-20">
+                <h1 className='text-5xl text-center font-bold text-gray-600 mb-5'>All Services</h1>
                 <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
                     <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {

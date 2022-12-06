@@ -17,7 +17,7 @@ const AllService = () => {
         <div>
             <section className=" text-gray-600">
                 <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-                    <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                         {
                             services.sort((a, b) => b.time - a.time).map(service => <ServiceCard
                                 key={service._id}

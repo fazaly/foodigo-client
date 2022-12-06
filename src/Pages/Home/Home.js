@@ -12,7 +12,6 @@ const Home = () => {
 
     return (
         <section className="dark:bg-gray-800 dark:text-gray-100">
-            <Services/>
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-3 mx-auto sm:py-12  lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leading-none text-gray-600 sm:text-6xl">Order Healthy And Fresh Food Any Time
@@ -28,6 +27,7 @@ const Home = () => {
                     <img src={banner} alt="" className="max-w-sm md:max-w-md lg:max-w-md rounded-lg shadow-2xl" />
                 </div>
             </div>
+            <Services/>
             <Delicious/>
             <GetUpdate/>
         </section>

@@ -5,7 +5,7 @@ const DeliciousCard = ({delicious}) => {
     return (
         <div className='card card-compact sm:w-96 sm:h-full bg-base-200 shadow-xl'>
             <div>
-                <img src={img} alt="" className="w-full rounded-lg p-4 mb-2 h-60 sm:h-96" />
+                <img src={img} alt="" className="w-full rounded p-4 mb-2 h-60 sm:h-96" />
             </div>
             <div className="flex flex-wrap justify-between">
                 <div className="space-x-2 p-6">

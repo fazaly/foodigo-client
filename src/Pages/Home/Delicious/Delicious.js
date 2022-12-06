@@ -28,7 +28,7 @@ const Delicious = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center font-bold text-gray-600'>Super Delicious Deal</h1>
+            <h1 className='text-5xl text-center font-bold text-gray-600 mt-20'>Super Delicious Deal</h1>
             <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12 mb-10'>
                 {
                     deliciousItems.map(delicious => <DeliciousCard
