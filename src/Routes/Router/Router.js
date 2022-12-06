@@ -5,16 +5,11 @@ import Blog from "../../Pages/Blog/Blog";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home";
 import AllService from "../../Pages/Home/Services/AllService";
-import ServiceCard from "../../Pages/Home/Services/ServiceCard";
 import Login from "../../Pages/Login/Login";
 import MyReview from "../../Pages/MyReview/MyReview";
 import UpdateReview from "../../Pages/MyReview/UpdateReview";
-import MyReviews from "../../Pages/MyReviews/MyReviews";
-import ClientReview from "../../Pages/ServiceReview/ClientReview";
-import PlaceReview from "../../Pages/ServiceReview/PlaceReview";
 import ServiceReview from "../../Pages/ServiceReview/ServiceReview";
 import Signup from "../../Pages/SignUp/Signup";
-import PrivateRoute from "./PrivateRoute";
 
 // Create Browser Router
 const router = createBrowserRouter( [
@@ -33,7 +28,7 @@ const router = createBrowserRouter( [
             },
             {
                 path: '/review',
-                element: <PrivateRoute><MyReview/></PrivateRoute>
+                element: <MyReview/>
             },
             {
                 path: '/allservices',
@@ -45,7 +40,7 @@ const router = createBrowserRouter( [
             },
             {
                 path: '/service',
-                element: <PrivateRoute><AddService/></PrivateRoute>
+                element: <AddService/>
             },
             {
                 path: '/blog',
